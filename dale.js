@@ -22,6 +22,8 @@ var dale = angular.module('dale',[])
         updateClock();
       }, 1000);
     };
+    $scope.theSrc = 'merry.mp3';
+    $scope.picSrc = 'CodeFellows.png';
     updateClock();
   });
 /**
