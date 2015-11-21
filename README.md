@@ -4,4 +4,5 @@ In order to use, make sure you have an angular directory with angular in it as r
 ####ang01
 basic data binding using angular and only html
 ####ang02
+Creating the angular app module.
 Create a module in JS add a controller and update the $scope from the controller to display and update a clock in the view
