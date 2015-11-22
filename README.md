@@ -13,3 +13,5 @@ Demonstrates the ability to attach types to $scope by attaching a person object 
 Parse angular expressions on the fly using the $parse service and $watch. Type an angular expression into the input field and it will be parsed into raw JavaScript and displayed below the input box
 ####ang06
 Use $interpolate to render templates manually allowing the use of templates in user input.
+####ang07
+Using ng-attr-src to change image and audio sources
