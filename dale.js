@@ -52,7 +52,7 @@ dale.controller('PropController',function($scope){
   };
 });
 /**
- * Becomes a child controller when placed inside the PropConroller's element in the html
+ * Becomes a child controller when placed inside the PropController's element in the html
  */
 dale.controller('PropChildController', function($scope){
   $scope.displayPhone = function(){
