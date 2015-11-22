@@ -29,7 +29,7 @@ var dale = angular.module('dale',[])
  */
 dale.controller('CalcController', function($scope){
   /**
-   *
+   * add 1 to amount
     * @type {number}
    */
   $scope.counter = 0;

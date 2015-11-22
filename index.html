@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Every thing inside the html element belongs to angular because that is where ng-app is declared. Give ng-app a value in order to assign it to a paticular module that is defined in the accompying JS file.-->
+<!--Every thing inside the html element belongs to angular because that is where ng-app is declared. Give ng-app a value in order to assign it to a particular module that is defined in the accompanying JS file.-->
 <html ng-app="dale">
 <head lang="en">
     <meta charset="UTF-8">
@@ -7,14 +7,14 @@
     <script src="angular/angular.js"></script>
 </head>
 <body>
-<!--Every thing in this div class is scoped to DaleController because of the ng-contoller directive-->
+<!--Every thing in this div class is scoped to DaleController because of the ng-controller directive-->
 <div ng-controller="DaleController">
 <h1>Hello {{clock.now}} !</h1>
 </div>
 <!--Using the ng-click directive multi-controller scopes-->
 <div ng-controller="CalcController">
     <h4>A simple calculator</h4>
-    <button ng-click="add(1)" class="button">Add</button>
+    <button ng-click="add(1)" class="button">Add</button> <!--calling functions with ng-click-->
     <a ng-click="add(-1)" class="button alert">Subtract</a>
     <h4>Current count: {{counter}}</h4>
 </div>
