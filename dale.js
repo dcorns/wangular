@@ -94,7 +94,7 @@ dale.controller('interpolateController', function($scope, $interpolate){
     }
   });
   /**
-   * Also watch the input field so that when to changes, it will be reflected in the email body without having to type in the body again afterwards for it to update.
+   * Also watch the input field so that when it changes, it will be reflected in the email body without having to type in the body again afterwards for it to update.
    */
   $scope.$watch('to', function(recc){
     /**
