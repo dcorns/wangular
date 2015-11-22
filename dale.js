@@ -65,7 +65,7 @@ dale.controller('PropChildController', function($scope){
  */
 dale.controller('parseController', function($scope, $parse){
   /**
-   * Register a watch on expr to parse its value and bind the result to $scope.parsedValue
+   * Register a watch on expr (in the view) to parse its value and bind the result to $scope.parsedValue
    */
   $scope.$watch('expr', function(newVal, oldVal, scope){
     if(newVal !== oldVal){
