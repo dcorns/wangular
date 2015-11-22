@@ -10,6 +10,7 @@
 <!--Every thing in this div class is scoped to DaleController because of the ng-contoller directive-->
 <div ng-controller="DaleController">
 <h1>Hello {{clock.now}} !</h1>
+    <!--Changing audio and image sources with ng-attr-src-->
     <audio autoplay ng-attr-src={{theSrc}}></audio>
     <img ng-attr-src="{{picSrc}}">
 </div>

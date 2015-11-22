@@ -22,6 +22,7 @@ var dale = angular.module('dale',[])
         updateClock();
       }, 1000);
     };
+  //binding video and audio sources to the view
     $scope.theSrc = 'merry.mp3';
     $scope.picSrc = 'CodeFellows.png';
     updateClock();
