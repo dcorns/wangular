@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Every thing inside the html element belongs to angular because that is where ng-app is declared. Give ng-app a value in order to assign it to a paticular module that is defined in the accompying JS file.-->
+<!--Every thing inside the html element belongs to angular because that is where ng-app is declared. Give ng-app a value in order to assign it to a particular module that is defined in the accompanying JS file.-->
 <html ng-app="dale">
 <head lang="en">
     <meta charset="UTF-8">
@@ -36,7 +36,7 @@
     <input ng-model="expr" type="text" placeholder="Enter an Expression"/>
     <h2>{{parsedValue}}</h2>
 </div>
-<!--Using a template expression for the ng-model to in the emailBody will put the contents of to in its place when the email body changes-->
+<!--Using a template expression for the ng-model in the emailBody will put the contents of to in its place when the email body changes. So using {{to}} in the emailBody textarea will cause the contents of 'to' to be substituted for {{to}}-->
 <div ng-controller="interpolateController">
     <input ng-model="to" type="email" placeholder="Recipient"/>
     <textarea ng-model="emailBody"></textarea>
