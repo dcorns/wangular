@@ -33,7 +33,7 @@
     <input ng-model="expr" type="text" placeholder="Enter an Expression"/>
     <h2>{{parsedValue}}</h2>
 </div>
-<!--Using a template expression for the ng-model in the emailBody will put the contents of to in its place when the email body changes-->
+<!--Using a template expression for the ng-model in the emailBody will put the contents of to in its place when the email body changes. So using {{to}} in the emailBody textarea will cause the contents of 'to' to be substituted for {{to}}-->
 <div ng-controller="interpolateController">
     <input ng-model="to" type="email" placeholder="Recipient"/>
     <textarea ng-model="emailBody"></textarea>

@@ -88,7 +88,7 @@ dale.controller('interpolateController', function($scope, $interpolate){
        */
       $scope.template = $interpolate(body);
       /**
-       ** When executed template will return body interpolation of any occurrence of the template within it.
+       ** When executed template will return body interpolation of any occurrence of the template within it. So where ever {{to}} is typed into body, the contents of $scope.to will be substituted in $scope.previewText.
        */
       $scope.previewText = $scope.template({to: $scope.to});
     }
