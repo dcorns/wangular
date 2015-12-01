@@ -7,9 +7,10 @@
     <script src="angular/angular.js"></script>
 </head>
 <body>
-<!--Every thing in this div class is scoped to DaleController because of the ng-contoller directive-->
+<!--Every thing in this div class is scoped to DaleController because of the ng-controller directive-->
 <div ng-controller="DaleController">
-<h1>Hello {{clock.now}} !</h1>
+    <!--combining filters, we make our clock display only the time and change the default case AM/PM to am/pm-->
+<h1>{{clock.now|date:'mediumTime'|lowercase}} !</h1>
     <!--Changing audio and image sources with ng-attr-src-->
     <audio autoplay ng-attr-src={{theSrc}}></audio>
     <img ng-attr-src="{{picSrc}}">
@@ -43,7 +44,14 @@
     <pre>{{previewText}}</pre>
 </div>
 <div ng-controller="filterController">
-    <h2>{{sample}}</h2>
+    <!--using angular built-in filters in the html-->
+    <h2>{{sample|uppercase}}</h2>
+    <!--here we pass an argument to the number filter using the :-->
+    <p>{{23.3456|number:2}}</p>
+    <!--the following has the lowercase filter applied from JavaScript-->
+    <div ng-controller="JSFilteredController">
+        <h2>{{sampletwo}}</h2>
+    </div>
 </div>
 <script src="dale.js" async></script>
 </body>

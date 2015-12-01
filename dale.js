@@ -112,5 +112,9 @@ dale.controller('interpolateController', function($scope, $interpolate){
   });
 });
 dale.controller('filterController', function($scope){
-
+  $scope.sample = 'sample text';
 });
+//Using JS to apply angular filters requires much more work than doing it in the html. Of course changing the appearance of the text should probably be handled by css anyway.
+dale.controller('JSFilteredController', ['$scope', '$filter', function($scope, $filter){
+  $scope.sampletwo = $filter('lowercase')('SAMPLE TWO TEXT');
+}]);

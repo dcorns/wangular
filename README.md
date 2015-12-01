@@ -15,3 +15,5 @@ Parse angular expressions on the fly using the $parse service and $watch. Type a
 Use $interpolate to render templates manually allowing the use of templates in user input.
 ####ang07
 Using ng-attr-src to change image and audio sources
+####ang08
+Simple angular filter examples
