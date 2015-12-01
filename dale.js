@@ -24,7 +24,7 @@ var dale = angular.module('dale',[])
     };
   //binding video and audio sources to the view
     $scope.theSrc = 'merry.mp3';
-    $scope.picSrc = 'CodeFellows.png';
+    $scope.picSrc = 'CodeFellowsSmaller.png';
     updateClock();
   });
 /**
