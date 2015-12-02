@@ -113,8 +113,29 @@ dale.controller('interpolateController', function($scope, $interpolate){
 });
 dale.controller('filterController', function($scope){
   $scope.sample = 'sample text';
+  $scope.ary = ['Ari', 'Lerner', 'Likes', 'To', 'Eat', 'Pizza'];
+  $scope.objary = [
+    {name: 'Tom',
+    age: 16},
+    {name: 'Tex',
+    age:68},
+    {name: 'Sue',
+    age: 16}
+  ]
 });
 //Using JS to apply angular filters requires much more work than doing it in the html. Of course changing the appearance of the text should probably be handled by css anyway.
 dale.controller('JSFilteredController', ['$scope', '$filter', function($scope, $filter){
   $scope.sampletwo = $filter('lowercase')('SAMPLE TWO TEXT');
 }]);
+
+//Here is a custom filter that returns the first letter of each word from the input
+dale.filter('firstLetters', function(){
+  return function(input) {
+    var words = input.split(' ');
+    var out = words.map(function(item){
+      return item[0].toUpperCase();
+    });
+    out = out.join('');
+    return out;
+  }
+});

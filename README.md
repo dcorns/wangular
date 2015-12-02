@@ -17,3 +17,5 @@ Use $interpolate to render templates manually allowing the use of templates in u
 Using ng-attr-src to change image and audio sources
 ####ang08
 Simple angular filter examples
+####ang09
+Using angular filter on arrays, creating custom angular filters

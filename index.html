@@ -46,8 +46,15 @@
 <div ng-controller="filterController">
     <!--using angular built-in filters in the html-->
     <h2>{{sample|uppercase}}</h2>
+    <!--using the custom filter from dale.js-->
+    <h2>{{sample|firstLetters}}</h2>
     <!--here we pass an argument to the number filter using the :-->
     <p>{{23.3456|number:2}}</p>
+    <!--using the 'filter' filter on arrays, it may help to think of this a query since it returns an array base on the search criteria-->
+    <!--filtering simple array elements-->
+    <h2>{{ary|filter:'e'}}</h2>
+    <!--Filtering array objects: returns all objects that contain 16 as a value for the age property-->
+    <h2>{{objary | filter:{'age': 16}:'strict'}}</h2>
     <!--the following has the lowercase filter applied from JavaScript-->
     <div ng-controller="JSFilteredController">
         <h2>{{sampletwo}}</h2>
