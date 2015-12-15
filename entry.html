@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="entry">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Entry Page</title>
+    <script src="angular/angular.js"></script>
+</head>
+<body ng-controller="entryController">
+<!--novalidate inhibits native browser validation-->
+<form name="entry-form" novalidate>
+    <!--We can use HTML5 validations like required along with the ng validation directives-->
+    <label for="email">EMAIL</label>
+    <input id="email" type="email" name="email" ng-model="email" placeholder="Email Address" required>
+    <input name="name" ng-model="name" placeholder="3 - 15 characters" type="text" ng-minlength="3" ng-maxlength="15">
+    <!--Using regX with ng pattern-->
+    <input type="text" name="rx" ng-pattern="[A-Z]" placeholder="only capital letters">
+</form>
+<script src="entry.js"></script>
+</body>
+</html>

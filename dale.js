@@ -139,3 +139,5 @@ dale.filter('firstLetters', function(){
     return out;
   }
 });
+
+//Form Validation
