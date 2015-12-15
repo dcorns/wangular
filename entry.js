@@ -6,5 +6,5 @@
 'use strict';
 var entry = angular.module('entry', []);
 entry.controller('entryController', function($scope){
-  console.log($scope.entryForm);
+
 });

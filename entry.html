@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <title>Entry Page</title>
     <script src="angular/angular.js"></script>
+    <link rel="stylesheet" href="validate.css">
 </head>
 <body ng-controller="entryController">
 <!--novalidate inhibits native browser validation-->
-<form name="entry-form" novalidate>
+<form name="entryform" ng-model="entryform" novalidate>
     <!--We can use HTML5 validations like required along with the ng validation directives-->
     <label for="email">EMAIL</label>
     <input id="email" type="email" name="email" ng-model="email" placeholder="Email Address" required>
-    <input name="name" ng-model="name" placeholder="3 - 15 characters" type="text" ng-minlength="3" ng-maxlength="15">
-    <!--Using regX with ng pattern-->
-    <input type="text" name="rx" ng-pattern="[A-Z]" placeholder="only capital letters">
+    <!--Using angular validators-->
+    <input name="mname" ng-model="mname" placeholder="3 - 15 characters" type="text" ng-minlength="3" ng-maxlength="15">
+    <!--Using regX with ng-pattern-->
+    <input type="text" name="rx" ng-pattern="/[A-Z]/" ng-model="rx" placeholder="Must include a capital letter">
 </form>
 <script src="entry.js"></script>
 </body>

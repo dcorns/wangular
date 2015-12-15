@@ -1,0 +1,13 @@
+/*angular styles*/
+input.ng-invalid{
+    border: 2px solid #ff0000;
+}
+input.ng-valid{
+    border: 2px solid #008000;
+}
+input.ng-dirty{
+    background-color: #db7093;
+}
+input.ng-pristine{
+    background-color: #add8e6;
+}
