@@ -21,4 +21,4 @@ Simple angular filter examples
 Using angular filter on arrays, creating custom angular filters
 ####ang10
 Form validation with angular.
-Demonstrated in entry.html, validate.css, and entry.js
+Demonstrated in entry.html, validate.css Using CSS
