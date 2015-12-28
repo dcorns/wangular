@@ -1,0 +1,21 @@
+{
+  "name": "wangular",
+  "homepage": "https://github.com/dcorns/wangular",
+  "authors": [
+    "Dale <drcorns@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-messages": "~1.4.8"
+  }
+}

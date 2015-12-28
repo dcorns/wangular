@@ -3,7 +3,8 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Entry Page</title>
-    <script src="angular/angular.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
     <link rel="stylesheet" href="validate.css">
 </head>
 <body ng-controller="entryController">
@@ -33,19 +34,16 @@
                        ng-minlength="3"
                        ng-maxlength="20" required />
                 <div class="error"
-                     ng-show="anotherForm.name.$dirty && anotherForm.name.$invalid">
-                    <small class="error"
-                           ng-show="anotherForm.name.$error.required">
+                     ng-messages="anotherForm.name.$error">
+                    <div ng-message="required">
                         Your Name is Required
-                    </small>
-                    <small class="error"
-                           ng-show="anotherForm.name.$error.minlength">
+                    </div>
+                    <div ng-message="minlength">
                         Must include 3 characters
-                    </small>
-                    <small class="error"
-                           ng-show="anotherForm.name.$error.maxlength">
+                    </div>
+                    <div ng-message="maxlength">
                         Limit to 20 characters!
-                        </small>
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,23 +57,19 @@
                        ng-minlength="3"
                        ng-maxlength="20" required/>
                 <div class="error"
-                     ng-show="anotherForm.email.$dirty && anotherForm.email.$invalid">
-                    <small class="error"
-                           ng-show="anotherForm.email.$error.required">
+                     ng-messages="anotherForm.email.$error">
+                    <div ng-message="required">
                         Email is required
-                    </small>
-                    <small class="error"
-                           ng-show="anotherForm.email.$error.minlength">
+                    </div>
+                    <div ng-message="minlength">
                         Must be at least three characters
-                    </small>
-                    <small class="error"
-                           ng-show="anotherForm.email.$error.maxlength">
+                    </div>
+                    <div ng-message="maxlength">
                         No more than 20 characters
-                    </small>
-                    <small class="error"
-                           ng-show="anotherForm.email.$error.email">
-                        Enter a valid email address
-                    </small>
+                    </div>
+                    <div ng-message="email">
+                        Enter valid email
+                    </div>
                 </div>
             </div>
         </div>
@@ -91,19 +85,16 @@
 
                    required/>
             <div class="error"
-                 ng-show="anotherForm.username.$dirty && anotherForm.username.$invalid">
-                <small class="error"
-                       ng-show="anotherForm.username.$error.required">
+                 ng-messages="anotherForm.username.$error">
+                <div ng-message="required">
                     Username is required.
-                </small>
-                <small class="error"
-                       ng-show="anotherForm.username.$error.minlength">
+                </div>
+                <div ng-message="minlength">
                     Must be at least three characters
-                </small>
-                <small class="error"
-                       ng-show="anotherForm.username.$error.maxlength">
+                </div>
+                <div ng-message="maxlength">
                     No more than 20 characters
-                </small>
+                </div>
             </div>
         </div>
         <button type="submit" class="button radius"

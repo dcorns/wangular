@@ -25,4 +25,4 @@ Demonstrated in entry.html, validate.css Using CSS
 ####ang11
 Form validation using ng-show and ng-disabled
 ####ang12
-Form validation with ngMessages
+Form validation with ngMessages (requires bower install)
