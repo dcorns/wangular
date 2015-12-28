@@ -24,3 +24,5 @@ Form validation with angular.
 Demonstrated in entry.html, validate.css Using CSS
 ####ang11
 Form validation using ng-show and ng-disabled
+####ang12
+Form validation with ngMessages
