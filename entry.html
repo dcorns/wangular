@@ -32,22 +32,13 @@
                        name="name"
                        ng-model="signup.name"
                        ng-minlength="3"
-                       ng-maxlength="20" required />
+                       ng-maxlength="20" required/>
                 <div class="error"
                      ng-messages="anotherForm.name.$error">
-                    <div ng-message="required">
-                        Your Name is Required
-                    </div>
-                    <div ng-message="minlength">
-                        Must include 3 characters
-                    </div>
-                    <div ng-message="maxlength">
-                        Limit to 20 characters!
-                    </div>
+                    <div ng-messages-include="errors.html"></div>
                 </div>
             </div>
-        </div>
-        <div class="row">
+
             <div class="large-12 columns">
                 <label>Your Email</label>
                 <input type="email"
@@ -56,17 +47,10 @@
                        ng-model="signup.email"
                        ng-minlength="3"
                        ng-maxlength="20" required/>
+
                 <div class="error"
                      ng-messages="anotherForm.email.$error">
-                    <div ng-message="required">
-                        Email is required
-                    </div>
-                    <div ng-message="minlength">
-                        Must be at least three characters
-                    </div>
-                    <div ng-message="maxlength">
-                        No more than 20 characters
-                    </div>
+                    <div ng-messages-include="errors.html"></div>
                     <div ng-message="email">
                         Enter valid email
                     </div>
@@ -82,19 +66,10 @@
                    ng-model="signup.username"
                    ng-minlength="3"
                    ng-maxlength="20"
-
                    required/>
             <div class="error"
                  ng-messages="anotherForm.username.$error">
-                <div ng-message="required">
-                    Username is required.
-                </div>
-                <div ng-message="minlength">
-                    Must be at least three characters
-                </div>
-                <div ng-message="maxlength">
-                    No more than 20 characters
-                </div>
+                <div ng-messages-include="errors.html"></div>
             </div>
         </div>
         <button type="submit" class="button radius"
