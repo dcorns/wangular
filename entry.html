@@ -9,6 +9,7 @@
 <body ng-controller="entryController">
 <!--novalidate inhibits native browser validation-->
 <form name="entryform" ng-model="entryform" novalidate>
+    <fieldset>
     <!--We can use HTML5 validations like required along with the ng validation directives-->
     <label for="email">EMAIL</label>
     <input id="email" type="email" name="email" ng-model="email" placeholder="Email Address" required>
@@ -16,6 +17,99 @@
     <input name="mname" ng-model="mname" placeholder="3 - 15 characters" type="text" ng-minlength="3" ng-maxlength="15">
     <!--Using regX with ng-pattern-->
     <input type="text" name="rx" ng-pattern="/[A-Z]/" ng-model="rx" placeholder="Must include a capital letter">
+    </fieldset>
+</form>
+
+<!--A more thorough form validation example-->
+<form name="anotherForm" novalidate ng-submit="signUp()">
+    <fieldset>
+        <div class="row">
+            <div class="large-12 columns">
+                <label>Your Name</label>
+                <input type="text"
+                       placeholder="Name"
+                       name="name"
+                       ng-model="signup.name"
+                       ng-minlength="3"
+                       ng-maxlength="20" required />
+                <div class="error"
+                     ng-show="anotherForm.name.$dirty && anotherForm.name.$invalid">
+                    <small class="error"
+                           ng-show="anotherForm.name.$error.required">
+                        Your Name is Required
+                    </small>
+                    <small class="error"
+                           ng-show="anotherForm.name.$error.minlength">
+                        Must include 3 characters
+                    </small>
+                    <small class="error"
+                           ng-show="anotherForm.name.$error.maxlength">
+                        Limit to 20 characters!
+                        </small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-12 columns">
+                <label>Your Email</label>
+                <input type="email"
+                       placeholder="Email"
+                       name="email"
+                       ng-model="signup.email"
+                       ng-minlength="3"
+                       ng-maxlength="20" required/>
+                <div class="error"
+                     ng-show="anotherForm.email.$dirty && anotherForm.email.$invalid">
+                    <small class="error"
+                           ng-show="anotherForm.email.$error.required">
+                        Email is required
+                    </small>
+                    <small class="error"
+                           ng-show="anotherForm.email.$error.minlength">
+                        Must be at least three characters
+                    </small>
+                    <small class="error"
+                           ng-show="anotherForm.email.$error.maxlength">
+                        No more than 20 characters
+                    </small>
+                    <small class="error"
+                           ng-show="anotherForm.email.$error.email">
+                        Enter a valid email address
+                    </small>
+                </div>
+            </div>
+        </div>
+
+        <div class="large-12 columns">
+            <label>Your Username</label>
+            <input type="text"
+                   placeholder="username"
+                   name="username"
+                   ng-model="signup.username"
+                   ng-minlength="3"
+                   ng-maxlength="20"
+
+                   required/>
+            <div class="error"
+                 ng-show="anotherForm.username.$dirty && anotherForm.username.$invalid">
+                <small class="error"
+                       ng-show="anotherForm.username.$error.required">
+                    Username is required.
+                </small>
+                <small class="error"
+                       ng-show="anotherForm.username.$error.minlength">
+                    Must be at least three characters
+                </small>
+                <small class="error"
+                       ng-show="anotherForm.username.$error.maxlength">
+                    No more than 20 characters
+                </small>
+            </div>
+        </div>
+        <button type="submit" class="button radius"
+                ng-disabled="anotherForm.$invalid">
+            Submit!</button>
+    </fieldset>
 </form>
 <script src="entry.js"></script>
 </body>

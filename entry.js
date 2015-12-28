@@ -7,4 +7,7 @@
 var entry = angular.module('entry', []);
 entry.controller('entryController', function($scope){
 
+  $scope.signUp = function(){
+    console.dir($scope.signup);
+  }
 });
